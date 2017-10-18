@@ -16,19 +16,17 @@ public class Rectangle implements Shape {
 
 
 	public double calculateArea() {
-		// To be written by student
-		return 0.0;
+		return (length*width);
 	}
 
 
 	public double calculatePerimeter() {
-		// To be written by student
-		return 0.0;
+		return((length*2)+(width*2));
 	}
 
 
 	public String toString() {
 		return "Rectangle Width: " + width + " Length: " + length + " Area: " + this.calculateArea() + " Perimeter: "
-				+ this.calculatePerimeter();
+				+ this.calculatePerimeter()+"\n";
 	}
 }
