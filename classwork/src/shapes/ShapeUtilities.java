@@ -38,8 +38,12 @@ public class ShapeUtilities {
 	 * @return double
 	 */
 	public static double sumArea(Shape[] shapes) {
-		// To be written by student
-		return 0.0;
+		double areasum=0;
+		for(int i=0;i<shapes.length;i++)
+		{
+			areasum+=shapes[i].calculateArea();
+		}
+		return areasum;
 	}
 
 	/**
@@ -49,8 +53,12 @@ public class ShapeUtilities {
 	 * @return double
 	 */
 	public static double sumPerimeter(Shape[] shapes) {
-		// To be written by student
-		return 0.0;
+		double perisum=0;
+		for(int i=0;i<shapes.length;i++)
+		{
+			perisum+=shapes[i].calculatePerimeter();
+		}
+		return perisum;
 	}
 
 }
