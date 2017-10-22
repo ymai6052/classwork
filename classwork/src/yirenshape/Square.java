@@ -1,4 +1,4 @@
-package shapes;
+package yirenshape;
 
 public class Square extends Rectangle {
 
@@ -11,8 +11,7 @@ public class Square extends Rectangle {
 
 	@Override
 	public String toString() {
-		// To be written by student
-		return "";
+		return "Square side: "+side+" Area: "+this.calculateArea()+" Perimeter: "+this.calculatePerimeter();
 	}
 
 }

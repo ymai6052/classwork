@@ -1,19 +1,9 @@
-package shapes;
+package yirenshape;
 
 import java.util.Random;
 
-/**
- * @author Mr Levin Created 10/16/2017 Lab 2.1 shapes
- *
- */
-
 public class ShapeUtilities {
 
-	/**
-	 * Creates a random shape from the choices.
-	 * 
-	 * @return Shape Student Work: Update with your own shape.
-	 */
 	public static Shape randomShape() {
 		Random rand = new Random();
 		int x = rand.nextInt(3);
@@ -31,26 +21,22 @@ public class ShapeUtilities {
 
 	}
 
-	/**
-	 * adds up the area of all the shapes in the array
-	 * 
-	 * @param shapes
-	 * @return double
-	 */
 	public static double sumArea(Shape[] shapes) {
-		// To be written by student
-		return 0.0;
+		double areasum=0;
+		for(int i=0;i<shapes.length;i++)
+		{
+			areasum+=shapes[i].calculateArea();
+		}
+		return areasum;
 	}
 
-	/**
-	 * adds up the perimeter of all the shapes in the array
-	 * 
-	 * @param shapes
-	 * @return double
-	 */
 	public static double sumPerimeter(Shape[] shapes) {
-		// To be written by student
-		return 0.0;
+		double perisum=0;
+		for(int i=0;i<shapes.length;i++)
+		{
+			perisum+=shapes[i].calculatePerimeter();
+		}
+		return perisum;
 	}
 
 }

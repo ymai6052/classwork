@@ -1,9 +1,5 @@
-package shapes;
+package yirenshape;
 
-/**
- * @author Mr Levin Created 10/16/2017 Lab 2.1 shapes
- *
- */
 public class Rectangle implements Shape {
 
 	private int length;
@@ -14,21 +10,16 @@ public class Rectangle implements Shape {
 		this.width = width;
 	}
 
-
 	public double calculateArea() {
-		// To be written by student
-		return 0.0;
+		return (length*width);
 	}
-
 
 	public double calculatePerimeter() {
-		// To be written by student
-		return 0.0;
+		return((length*2)+(width*2));
 	}
-
 
 	public String toString() {
 		return "Rectangle Width: " + width + " Length: " + length + " Area: " + this.calculateArea() + " Perimeter: "
-				+ this.calculatePerimeter();
+				+ this.calculatePerimeter()+"\n";
 	}
 }
