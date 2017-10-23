@@ -4,8 +4,10 @@ public class doubletest {
 	public static void main(String[]arges)
 	{
 		int x=2;
+		String cake="cake";
 		String[] tempArr= {"milk","cake","candy"};
 		System.out.println(doubledint(x));
+		System.out.println(doubledstr(cake));
 		doubleArr(tempArr);
 		for(int i=0;i<tempArr.length;i++)
 		{
