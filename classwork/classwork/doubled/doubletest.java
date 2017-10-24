@@ -6,13 +6,14 @@ public class doubletest {
 		int x=2;
 		String cake="cake";
 		String[] tempArr= {"milk","cake","candy"};
+		
 		System.out.println(doubledint(x));
+		
 		System.out.println(doubledstr(cake));
-		doubleArr(tempArr);
-		for(int i=0;i<tempArr.length;i++)
-		{
-			System.out.print(tempArr[i]);
-		}
+		
+		doubleArrfor(tempArr);
+		printArr(doubleArr(tempArr));
+		printArr(tempArr);
 	}
 	public static int doubledint(int x)
 	{
@@ -33,5 +34,19 @@ public class doubletest {
 			x++;
 		}
 		return strArr;
+	}
+	public static void doubleArrfor(Object[] strArr)
+	{
+		for(Object x:strArr)
+		{
+			System.out.println(x);
+		}
+	}
+	public static void printArr(String[] Arr)
+	{
+		for(int i=0;i<Arr.length;i++)
+		{
+			System.out.println(Arr[i]);
+		}
 	}
 }
