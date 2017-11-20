@@ -4,7 +4,7 @@ public class everyother {
 	public static void main(String[]args)
 	{
 		String[] arr1= {"Hello","how","you"};
-		String[] arr2= {",","are ","?"};
+		String[] arr2= {","," are ","?"};
 		
 		String [] arr3=everyOther(arr1,arr2);
 		
@@ -40,7 +40,7 @@ public class everyother {
 	{
 		for(int i=0;i<arr.length;i++)
 		{
-			System.out.println(arr[i]);
+			System.out.print(arr[i]);
 		}
 	}
 }
