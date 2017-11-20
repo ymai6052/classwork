@@ -22,18 +22,25 @@ public class everyother {
 		}
 		if(list1.length>list2.length)
 		{
-			for(int j=list2.length;j<list1.lenght;j++)
+			for(int j=list2.length;j<list1.length;j++)
 			{
 				result[index]=list1[j];
 			}
 		}
 		else 
 		{
-			for(intj=list1.length;j<list2.length;j++)
+			for(int j=list1.length;j<list2.length;j++)
 			{
 				result[index]=list2[j];
 			}
 		}
 		return result;
+	}
+	public static void printArray(String[] arr)
+	{
+		for(int i=0;i<arr.length;i++)
+		{
+			System.out.println(arr[i]);
+		}
 	}
 }
