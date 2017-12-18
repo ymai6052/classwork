@@ -8,11 +8,15 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-/** * Simple Java program to read CSV file in Java. In this program we will read 
- * * list of books stored in CSV file as comma separated values.
- *  * * @author WINDOWS 8 * */
-public class CSVReaderInJava {
-	public static void main(String[] args)
+/** 
+ * Simple Java program to read CSV file in Java. In this program we will read 
+ * list of books stored in CSV file as comma separated values.
+ * 
+ * @author WINDOWS 8
+ * 
+ */
+public class HelloWorld{
+	public static void main(String[]args)
 	{
 		List<Book> books = readBooksFromCSV("books.csv");
 		// let's print all the person read from CSV file 
@@ -40,7 +44,7 @@ public class CSVReaderInJava {
 				String[] attributes = line.split(",");
 				Book book = createBook(attributes);
 				// adding book into 
-				ArrayList books.add(book);
+				books.add(book);
 				// read next line before looping
 				// if end of file reached, line would be null 
 				line = br.readLine();
@@ -62,7 +66,7 @@ public class CSVReaderInJava {
 		return new Book(name, price, author);
 	} 
 }
-class Book { 
+ class Book { 
 	private String name; 
 	private int price;
 	private String author;
@@ -103,9 +107,3 @@ class Book {
 		return "Book [name=" + name + ", price=" + price + ", author=" + author + "]";
 	}
 }
-Output
-Book [name=Effective Java, price=42, author=Joshua Bloch] 
-Book [name=Head First Java, price=39, author=Kathy Sierra] 
-Book [name=Head First Design Pattern, price=44, author=Kathy Sierra]
-Book [name=Introduction to Algorithm, price=72, author=Thomas Cormen]
-
