@@ -21,7 +21,7 @@ public class runner {
 	} 
 	private static List<Book> readBooksFromCSV(String fileName)
 	{
-		List<Book> books = new ArrayList<>();
+		List<complaint> complaints = new ArrayList<>();
 		Path pathToFile = Paths.get(fileName);
 		// create an instance of BufferedReader
 		// using try with resource, Java 7 feature to close resources
@@ -36,9 +36,9 @@ public class runner {
 				// each line of 
 				// the file, using a comma as the delimiter 
 				String[] attributes = line.split(",");
-				Book book = createBook(attributes);
+				complaint complaint = createcomplaint(attributes);
 				// adding book into 
-				books.add(book);
+				complaints.add(complaint);
 				// read next line before looping
 				// if end of file reached, line would be null 
 				line = br.readLine();
@@ -49,15 +49,17 @@ public class runner {
 		{
 			ioe.printStackTrace();
 		}
-		return books;
+		return complaints;
 	} 
-	private static Book createBook(String[] metadata) 
+	private static Book createcomplaint(String[] metadata) 
 	{ 
-		String name = metadata[0];
-		int price = Integer.parseInt(metadata[1]);
-		String author = metadata[2];
+		int number = Integer.parseInt(metadata[0]);
+		String status = metadata[1];
+		String date = metadata[2];
+		int housenum=Integer.parseInt(metadata[3]);
+		String street=metadata[4];
 		// create and return book of this metadata 
-		return new Book(name, price, author);
+		return new complaint(number,status,date,housenum,street);
 	} 
 }
  class Book { 
