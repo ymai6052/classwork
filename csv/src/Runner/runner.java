@@ -12,7 +12,7 @@ import java.util.List;
 public class runner {
 	public static void main(String[]args)
 	{
-		List<Book> books = readBooksFromCSV("books.csv");
+		List<Book> books = readBooksFromCSV("complaint.csv");
 		// let's print all the person read from CSV file 
 		for (Book b : books) 
 		{ 
