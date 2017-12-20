@@ -9,23 +9,36 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-import csvfile.Book;
 public abstract class utilities {
 	ArrayList<String> CSVData;
 	int numColumns;
+	//Constructor accepts a File and reads all the data into CSVData
+	//initializes numColumns based on length of the first array
 	public CSVUtilities(File csv)
 	{
 		
 	}
+	
+	//Return an ArrayList with the headers for each column
 	public List<String> getColumnHeaders()
 	{
 		
 	}
-	public List<String> getData(int column)
+	
+	//Return an ArrayList with the data for a column specified
+	public List<String> getDataString(int column)
 	{
 		
 	}
-	public List<Double> getData(int column)
+	
+	//Return an ArrayList with the data converted to Integer
+	public List<Integer> getDataInt(int column)
+	{
+		
+	}
+	
+	//Return an ArrayList with the data converted to Double
+	public List<Double> getDataDouble(int column)
 	{
 		
 	}

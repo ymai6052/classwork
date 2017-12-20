@@ -12,14 +12,14 @@ import java.util.List;
 public class runner {
 	public static void main(String[]args)
 	{
-		List<Book> books = readBooksFromCSV("complaint.csv");
+		List<complaint> complaints = readBooksFromCSV("complaint.csv");
 		// let's print all the person read from CSV file 
-		for (Book b : books) 
+		for (complaint b : complaints) 
 		{ 
 			System.out.println(b); 
 		} 
 	} 
-	private static List<Book> readBooksFromCSV(String fileName)
+	private static List<complaint> readBooksFromCSV(String fileName)
 	{
 		List<complaint> complaints = new ArrayList<>();
 		Path pathToFile = Paths.get(fileName);
@@ -51,7 +51,7 @@ public class runner {
 		}
 		return complaints;
 	} 
-	private static Book createcomplaint(String[] metadata) 
+	private static complaint createcomplaint(String[] metadata) 
 	{ 
 		int number = Integer.parseInt(metadata[0]);
 		String status = metadata[1];
@@ -62,44 +62,48 @@ public class runner {
 		return new complaint(number,status,date,housenum,street);
 	} 
 }
- class Book { 
-	private String name; 
-	private int price;
-	private String author;
+ class complaint{ 
+	private int number;
+	private String status;
+	private String date;
+	private int housenum;
+	private String street;
 	
-	public Book(String name, int price, String author) 
+	public complaint(int number, String status, String date,int housenum,String street) 
 	{
-		this.name = name; 
-		this.price = price;
-		this.author = author;
+		this.number = number; 
+		this.status = status;
+		this.date = date;
+		this.housenum=housenum;
+		this.street=street;
 	} 
-	public String getName()
+	public int getcomplaintnum()
 	{
-		return name;
+		return number;
 	}
-	public void setName(String name)
-	{ 
-		this.name = name;
+	public String getStatus()
+	{
+		return status;
 	}
-	public int getPrice()
+	public void setStatus(String status)
 	{ 
-		return price;
+		this.status = status;
+	}
+	public String getdate()
+	{ 
+		return date;
 	} 
-	public void setPrice(int price)
-	{ 
-		this.price = price;
-	} 
-	public String getAuthor()
-	{ 
-		return author;
+	public int gethousenum()
+	{
+		return housenum;
 	}
-	public void setAuthor(String author)
-	{ 
-		this.author = author;
+	public String getstreet()
+	{
+		return street;
 	}
 	@Override 
 	public String toString()
 	{
-		return "Book [name=" + name + ", price=" + price + ", author=" + author + "]";
+		return "complaint [complaint#: " + number + ", status: " + status + ", date: " + date +", house#: "+ housenum+", street: "+street+ "]";
 	}
 }
